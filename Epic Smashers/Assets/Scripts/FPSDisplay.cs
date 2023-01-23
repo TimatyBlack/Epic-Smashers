@@ -5,7 +5,7 @@ public class FPSDisplay : MonoBehaviour
 {
     public TMP_Text fpsText;
 
-    private float pollingTime = 1f;
+    private float pollingTime = 0.2f;
     private float time;
     private float frameCount;
 

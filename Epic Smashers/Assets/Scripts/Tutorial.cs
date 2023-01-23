@@ -11,13 +11,12 @@ public class Tutorial : MonoBehaviour
     public Coroutine startTutorial;
     public TurretSpawner spawner;
 
-    private bool runOnceStart;
+    private bool runOnceStart = false;
     private bool runOnceShoot;
     private bool runOnceMerge;
 
     private void Start()
     {
-        runOnceStart = false;
         runOnceShoot = false;
         runOnceMerge = false;
 

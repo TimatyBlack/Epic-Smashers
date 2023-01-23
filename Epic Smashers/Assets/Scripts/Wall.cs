@@ -15,6 +15,7 @@ public class Wall : MonoBehaviour
     [SerializeField] private Vector3 _scaleTo;
 
     public float health, maxHealth = 20f;
+    public float coinAmount = 10;
 
     private void Start()
     {
@@ -43,7 +44,7 @@ public class Wall : MonoBehaviour
                 StartCoroutine(destroyDelay(shattersRgBodies[i].gameObject));
             }
 
-            for(int i = 0; i < 10; i++)
+            for(int i = 0; i < coinAmount; i++)
             {
                 CoinSpawn(transform.position);
             }

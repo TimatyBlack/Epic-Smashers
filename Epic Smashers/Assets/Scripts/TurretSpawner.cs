@@ -29,6 +29,8 @@ public class TurretSpawner : MonoBehaviour
     [SerializeField] private int mergeCost = 100;
     [SerializeField] private int incomeCost = 150;
 
+    public float rotationSpeed = 0.4f;
+
     public TMP_Text scoreText;
     public int score = 10;
 
@@ -97,7 +99,7 @@ public class TurretSpawner : MonoBehaviour
     {
         if (currTurretList.Count > 0)
         {
-            transform.Rotate(0, 0, 0.4f, Space.Self);
+            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime, Space.Self);
         }
         
         if(currTurretList.Count > 8)
@@ -401,7 +403,7 @@ public class TurretSpawner : MonoBehaviour
 
     private void AffordCheck()
     {
-        if (score > addTurretCost && isMerging == false)
+        if (score >= addTurretCost && isMerging == false)
         {
             addButton.interactable = true;
         }
@@ -410,7 +412,7 @@ public class TurretSpawner : MonoBehaviour
             addButton.interactable = false;
         }
 
-        if (score > mergeCost && MergeCheck() == true && isMerging == false)
+        if (score >= mergeCost && MergeCheck() == true && isMerging == false)
         {
             mergeButton.interactable = true;
         }
@@ -419,7 +421,7 @@ public class TurretSpawner : MonoBehaviour
             mergeButton.interactable = false;
         }
 
-        if (score > incomeCost && isMerging == false)
+        if (score >= incomeCost && isMerging == false)
         {
             incomeButton.interactable = true;
         }

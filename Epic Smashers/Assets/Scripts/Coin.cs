@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Coin : MonoBehaviour
 {
@@ -32,11 +33,24 @@ public class Coin : MonoBehaviour
         {
             value = 1;
         }
+
+        StartCoroutine(DestroyDelay());
     }
 
     public void Income()
     {
         value++;
         PlayerPrefs.SetInt("Value", value);
+    }
+
+    IEnumerator DestroyDelay()
+    {
+        yield return new WaitForSeconds(3f);
+
+        transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(gameObject);
     }
 }
