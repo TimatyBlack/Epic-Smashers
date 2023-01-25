@@ -818,7 +818,7 @@ Transform:
   m_GameObject: {fileID: 1139253939878128756}
   m_LocalRotation: {x: -0.5005355, y: -0.499464, z: 0.5005355, w: 0.499464}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 8529738463935024114}
   - {fileID: 6848828695739123477}
@@ -852,6 +852,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &5025489159309617704
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -893,7 +894,7 @@ Transform:
   m_GameObject: {fileID: 1223772234448867588}
   m_LocalRotation: {x: 0.6539807, y: -0.27030823, z: 0.2708878, w: -0.6525815}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 9136560413842911517}
   - {fileID: 6975565133292212752}
@@ -927,6 +928,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &4301672961115557869
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1194,7 +1196,7 @@ Transform:
   m_GameObject: {fileID: 1384553030316179901}
   m_LocalRotation: {x: -0, y: -0.7063487, z: 0.70786417, w: 0}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 8111499170893476724}
   - {fileID: 8839515368163737221}
@@ -1228,6 +1230,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &5555987643329551986
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2512,7 +2515,7 @@ Transform:
   m_GameObject: {fileID: 3078029348782345465}
   m_LocalRotation: {x: -0.653981, y: -0.27030805, z: 0.27088782, w: 0.6525812}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 4538402963824349295}
   - {fileID: 7220699075984792869}
@@ -2546,6 +2549,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &2405849780685978886
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3378,7 +3382,7 @@ Transform:
   m_GameObject: {fileID: 5053816836422133308}
   m_LocalRotation: {x: -0.27088782, y: -0.6525812, z: 0.653981, w: 0.27030805}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 6346242095972479290}
   - {fileID: 1152357333323062014}
@@ -3412,6 +3416,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &1928546343487249818
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4621,7 +4626,7 @@ Transform:
   m_GameObject: {fileID: 6503574834133017618}
   m_LocalRotation: {x: -0.70786417, y: -0, z: -0, w: 0.7063487}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 7467069689019860945}
   - {fileID: 8615406718394533888}
@@ -4655,6 +4660,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &6034084417324692142
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5035,7 +5041,7 @@ Transform:
   m_GameObject: {fileID: 6649937246652416214}
   m_LocalRotation: {x: 0.27088776, y: -0.65258133, z: 0.65398103, w: -0.27030796}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 8096262243495980170}
   - {fileID: 2074110719944886379}
@@ -5069,6 +5075,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &2832392655840306211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5449,7 +5456,7 @@ Transform:
   m_GameObject: {fileID: 7297704325016999183}
   m_LocalRotation: {x: 0.5005355, y: -0.499464, z: 0.5005355, w: -0.499464}
   m_LocalPosition: {x: 0, y: 0.0000010553363, z: -0.0000053993936}
-  m_LocalScale: {x: 4, y: 1, z: 4}
+  m_LocalScale: {x: 4, y: 1.4, z: 4}
   m_Children:
   - {fileID: 5365291176179124914}
   - {fileID: 4646481641453096589}
@@ -5483,6 +5490,7 @@ MonoBehaviour:
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
   maxHealth: 15
+  coinAmount: 10
 --- !u!64 &4099011528020126116
 MeshCollider:
   m_ObjectHideFlags: 0
