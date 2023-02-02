@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Cinemachine;
 using UnityEngine.UI;
+using Cinemachine;
 using TMPro;
 
 public class TurretSpawner : MonoBehaviour
@@ -24,7 +24,7 @@ public class TurretSpawner : MonoBehaviour
     [SerializeField] private TMP_Text addTurretValueText;
     [SerializeField] private TMP_Text mergeValueText;
     [SerializeField] private TMP_Text incomeValueText;
-    [SerializeField] private float radius = 1.5f;
+    [SerializeField] private float radius = 3f;
     [SerializeField] private int addTurretCost = 10;
     [SerializeField] private int mergeCost = 100;
     [SerializeField] private int incomeCost = 150;
@@ -76,7 +76,7 @@ public class TurretSpawner : MonoBehaviour
             incomeCost = 150;
         }
 
-        transposer = camera.AddCinemachineComponent<CinemachineTransposer>();
+        //transposer = camera.AddCinemachineComponent<CinemachineTransposer>();
 
         turretScale = turretList[0].transform.localScale;
         onTurretsCountChange += UpdatePosition;
@@ -112,7 +112,7 @@ public class TurretSpawner : MonoBehaviour
         }
 
         moveTurretToTarget();
-        Camera();
+        //Camera();
 
         addTurretValueText.text = addTurretCost.ToString();
         mergeValueText.text = mergeCost.ToString();
@@ -218,8 +218,8 @@ public class TurretSpawner : MonoBehaviour
                     int turretsInCircle = currCircle <= totalCircles - 1 ? 8 : currTurretList.Count % 8;
                     Debug.Log($"{i} = {currCircle}");
                     float anglePos = i % 8 * Mathf.PI * 2 / turretsInCircle;
-                    float x = Mathf.Cos(anglePos) * radius * (Mathf.CeilToInt(i / 8) + 1);
-                    float y = Mathf.Sin(anglePos) * radius * (Mathf.CeilToInt(i / 8) + 1);
+                    float x = Mathf.Cos(anglePos) * radius / (Mathf.CeilToInt(i / 8) + 1);
+                    float y = Mathf.Sin(anglePos) * radius / (Mathf.CeilToInt(i / 8) + 1);
                     Vector3 pos = new Vector3(x, y, 0);
                     float angleDegrees = anglePos * Mathf.Rad2Deg;
                     Quaternion rot = Quaternion.Euler(0, 0, angleDegrees - 90);
@@ -280,6 +280,18 @@ public class TurretSpawner : MonoBehaviour
         return false;
     }
 
+    public void Camera()
+    {
+        if (currTurretList.Count > 8)
+        {
+            transposer.m_FollowOffset = new Vector3(0, startOffset.y + 1, startOffset.z - 3f);
+        }
+        else
+        {
+            transposer.m_FollowOffset = startOffset;
+        }
+    }
+
     public void Merge()
     {   
         MergeCheck();
@@ -294,18 +306,6 @@ public class TurretSpawner : MonoBehaviour
 
                 StartCoroutine(AddTurretTimeDelay());
             }
-        }
-    }
-
-    public void Camera()
-    {
-        if (currTurretList.Count > 8)
-        {
-            transposer.m_FollowOffset = new Vector3(0, startOffset.y + 1, startOffset.z - 3f);
-        }
-        else
-        {
-            transposer.m_FollowOffset = startOffset;
         }
     }
 

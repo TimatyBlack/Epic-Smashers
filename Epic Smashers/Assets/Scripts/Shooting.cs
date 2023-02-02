@@ -94,4 +94,5 @@ public class Shooting : MonoBehaviour
 
         currBarrel = (currBarrel + 1) % bulletSpawnPointList.Count;
     }
+
 }

@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - WallPiece
   - FullWall
+  - Shatter
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - WallPanel
   - Coin
   - WallPiece
-  - 
+  - Circle
   - 
   - 
   - 

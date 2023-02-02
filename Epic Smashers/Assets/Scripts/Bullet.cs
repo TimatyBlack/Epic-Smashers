@@ -12,41 +12,61 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(Destroy());
+        StartCoroutine(DestroyBullet());
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent<Wall>(out Wall enemyComponent))
+        {
+            enemyComponent.TakeDamage(bulletDamage);
+
+            MeshRenderer wallRenderer = other.gameObject.GetComponent<MeshRenderer>();
+
+            wallRenderer.enabled = false;
+
+            enemyComponent.CoinSpawn(transform.position);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.TryGetComponent<Wall>(out Wall enemyComponent))
+        if (collision.gameObject.CompareTag("Shatter"))
         {
-            enemyComponent.TakeDamage(bulletDamage);
+            Rigidbody shatterRb = collision.gameObject.GetComponent<Rigidbody>();
+            shatterRb.isKinematic = false;
+            shatterRb.AddExplosionForce(700, new Vector3(shatterRb.transform.position.x,
+                                                         shatterRb.transform.position.y,
+                                                         shatterRb.transform.position.z + 1), 2f);
 
-            enemyComponent.CoinSpawn(transform.position);
-           
             Renderer wallMaterial = collision.gameObject.GetComponentInChildren<MeshRenderer>();
-            Transform wallTransform = collision.gameObject.GetComponent<Transform>();
-
-            Vector3 wallOrigScale = wallTransform.localScale;
-            Vector3 wallScaleTo = new Vector3(wallOrigScale.x - 0.02f, wallOrigScale.y, wallOrigScale.z - 0.02f);
-
-            wallTransform.DOScale(wallScaleTo, 0.1f)
-                .SetEase(Ease.InOutBounce);
 
             ParticleSystem spawnedParticle = Instantiate(particle, transform.position, particle.transform.rotation);
-
             ParticleSystemRenderer particleSystemRenderer = spawnedParticle.GetComponent<ParticleSystemRenderer>();
-
             particleSystemRenderer.material.color = wallMaterial.material.color;
-            
 
+            //StartCoroutine(DestroyShatter(collision.gameObject));
+
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator DestroyBullet()
+    {
+        yield return new WaitForSeconds(5);
 
         Destroy(gameObject);
     }
 
-    IEnumerator Destroy()
-    {
-        yield return new WaitForSeconds(5);
+    IEnumerator DestroyShatter(GameObject shatter)
+    {   
+        gameObject.transform.DOScale(new Vector3(0, 0, 0), 0);
+
+        yield return new WaitForSeconds(2);
+
+        shatter.transform.DOScale(new Vector3(0, 0, 0), 0.2f);
+
+        yield return new WaitForSeconds(0.2f);
 
         Destroy(gameObject);
     }

@@ -69,7 +69,7 @@ public class Wall : MonoBehaviour
 
     IEnumerator destroyDelay(GameObject shatter)
     {
-        yield return new WaitForSeconds(Random.Range(2, 5));
+        yield return new WaitForSeconds(Random.Range(1, 3));
 
         shatter.transform.DOScale(new Vector3(0,0,0), 0.5f)
             .SetEase(Ease.InOutSine);
@@ -79,5 +79,4 @@ public class Wall : MonoBehaviour
         Destroy(shatter);
     }
 
-    
 }
