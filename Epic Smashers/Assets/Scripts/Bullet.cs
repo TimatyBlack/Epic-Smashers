@@ -25,6 +25,8 @@ public class Bullet : MonoBehaviour
 
             wallRenderer.enabled = false;
 
+            enemyComponent.shatters.SetActive(true);
+
             enemyComponent.CoinSpawn(transform.position);
         }
     }

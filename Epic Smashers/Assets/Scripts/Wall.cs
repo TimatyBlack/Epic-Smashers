@@ -11,17 +11,23 @@ public class Wall : MonoBehaviour
     [SerializeField] private TurretSpawner spawner;
     [SerializeField] private Coin coin;
 
+    public GameObject shatters;
+
     [SerializeField] private Vector3 _originalScale;
     [SerializeField] private Vector3 _scaleTo;
+
+    
 
     public float health, maxHealth = 20f;
     public float coinAmount = 10;
 
     private void Start()
     {
+        shatters.SetActive(false);
+
         health = maxHealth;
         wallMainCollider = GetComponent<Collider>();
-        shattersRgBodies = GetComponentsInChildren<Rigidbody>();
+        shattersRgBodies = shatters.GetComponentsInChildren<Rigidbody>();
 
         spawner = FindObjectOfType<TurretSpawner>();
 
@@ -69,12 +75,12 @@ public class Wall : MonoBehaviour
 
     IEnumerator destroyDelay(GameObject shatter)
     {
-        yield return new WaitForSeconds(Random.Range(1, 3));
+        yield return new WaitForSeconds(Random.Range(0.5f, 1.5f));
 
         shatter.transform.DOScale(new Vector3(0,0,0), 0.5f)
             .SetEase(Ease.InOutSine);
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
 
         Destroy(shatter);
     }
