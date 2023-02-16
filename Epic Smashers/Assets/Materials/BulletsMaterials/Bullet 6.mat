@@ -2,14 +2,15 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bullet 6
   m_Shader: {fileID: 4800000, guid: 7cd5de0b884b14f88ab763ef465e1799, type: 3}
-  m_ShaderKeywords: _SEGMENTED_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -55,6 +56,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AmbientCol: 0
     - _BumpScale: 1
@@ -67,16 +69,16 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Lumin: 0
+    - _Lumin: 0.52
     - _MaxLight: 1
     - _Metallic: 0
-    - _MinLight: 1
+    - _MinLight: 0.75
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
     - _OtlWidth: 2
     - _Parallax: 0.02
-    - _Segmented: 1
+    - _Segmented: 0
     - _ShnIntense: 0
     - _ShnOverlap: 0
     - _ShnRange: 0.15
@@ -85,7 +87,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Steps: 3
-    - _StpSmooth: 0.513
+    - _StpSmooth: 0.483
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

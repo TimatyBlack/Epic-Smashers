@@ -11,6 +11,8 @@ public class MovingForward : MonoBehaviour
     private bool d_HitDetected;
     private RaycastHit d_HitInfo;
 
+    public LvlManager lvlManager;
+
     private Collider d_Collider;
     private Transform d_Transform;
 
@@ -41,6 +43,8 @@ public class MovingForward : MonoBehaviour
             if (d_HitInfo.collider.gameObject.tag == "Finish" && doOnce == false)
             {
                 doOnce = true;
+
+                lvlManager.nextLevelButton.interactable = true;
 
                 StartCoroutine(NextLvlMenuOn());
             }

@@ -7,12 +7,14 @@ using DG.Tweening;
 public class LvlManager : MonoBehaviour
 {
     public List<GameObject> levels;
+    public List<GameObject> gradients;
     public GameObject currentLevel;
     public MovingForward player;
     public GameObject nextLevelMenu;
     public Image transition;
     public CanvasGroup buttons;
     public CanvasGroup upValuesImages;
+    public Button nextLevelButton;
 
     public int currLvlIndex = 0;
 
@@ -20,6 +22,7 @@ public class LvlManager : MonoBehaviour
     {
         currLvlIndex = PlayerPrefs.GetInt("Level");
         levels[currLvlIndex].SetActive(true);
+        gradients[currLvlIndex].SetActive(true);
         currentLevel = Instantiate(levels[currLvlIndex]);
     }
 
@@ -33,6 +36,7 @@ public class LvlManager : MonoBehaviour
 
     public void NextLevel()
     {
+        nextLevelButton.interactable = false;
         StartCoroutine(NextLevelAnimation());
     }
 
@@ -66,6 +70,7 @@ public class LvlManager : MonoBehaviour
         currentLevel = Instantiate(levels[currLvlIndex + 1]);
 
         currLvlIndex++;
+        gradients[currLvlIndex].SetActive(true);
 
         PlayerPrefs.SetInt("Level", currLvlIndex);
     }

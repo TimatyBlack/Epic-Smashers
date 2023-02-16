@@ -19,6 +19,11 @@ public class TurretSpawner : MonoBehaviour
     [SerializeField] private Button addButton;
     [SerializeField] private Button mergeButton;
     [SerializeField] private Button incomeButton;
+
+    [SerializeField] private GameObject addButtonEnabled;
+    [SerializeField] private GameObject mergeButtonEnabled;
+    [SerializeField] private GameObject incomeButtonEnabled;
+
     [SerializeField] private ParticleSystem poofPref;
 
     [SerializeField] private TMP_Text addTurretValueText;
@@ -97,6 +102,15 @@ public class TurretSpawner : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && rotationSpeed <= 160f)
+        {
+            rotationSpeed += 20f;
+        }
+        else if(rotationSpeed > 80f)
+        {
+            rotationSpeed -= 50f * Time.deltaTime;
+        }
+
         if (currTurretList.Count > 0)
         {
             transform.Rotate(0, 0, rotationSpeed * Time.deltaTime, Space.Self);
@@ -398,7 +412,10 @@ public class TurretSpawner : MonoBehaviour
         AddTurret(levelToUp + 1);
 
         addButton.interactable = true;
+        addButtonEnabled.SetActive(false);
+
         incomeButton.interactable = true;
+        incomeButtonEnabled.SetActive(false);
     }
 
     private void AffordCheck()
@@ -406,28 +423,34 @@ public class TurretSpawner : MonoBehaviour
         if (score >= addTurretCost && isMerging == false)
         {
             addButton.interactable = true;
+            addButtonEnabled.SetActive(false);
         }
         else
         {
             addButton.interactable = false;
+            addButtonEnabled.SetActive(true);
         }
 
         if (score >= mergeCost && MergeCheck() == true && isMerging == false)
         {
             mergeButton.interactable = true;
+            mergeButtonEnabled.SetActive(false);
         }
         else
         {
             mergeButton.interactable = false;
+            mergeButtonEnabled.SetActive(true);
         }
 
         if (score >= incomeCost && isMerging == false)
         {
             incomeButton.interactable = true;
+            incomeButtonEnabled.SetActive(false);
         }
         else
         {
             incomeButton.interactable = false;
+            incomeButtonEnabled.SetActive(true);
         }
     }
 }
