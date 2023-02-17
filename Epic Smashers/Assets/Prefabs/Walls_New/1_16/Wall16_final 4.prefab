@@ -1362,7 +1362,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &325381781820096765
 GameObject:
@@ -3404,7 +3404,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &1223049006246342192
 GameObject:
@@ -4020,7 +4020,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &1346522631079425427
 GameObject:
@@ -10305,7 +10305,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &3509970642759376169
 GameObject:
@@ -13025,7 +13025,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &4734310243806311737
 GameObject:
@@ -13937,7 +13937,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &4991926034781505030
 GameObject:
@@ -16673,7 +16673,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &5985690333265555384
 GameObject:
@@ -18462,7 +18462,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &6665373121430560303
 GameObject:
@@ -20181,7 +20181,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &7397197030962482648
 GameObject:
@@ -20415,7 +20415,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &7538125960128706852
 GameObject:
@@ -21101,7 +21101,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &7794080705006555140
 GameObject:
@@ -22352,7 +22352,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &8330466421589968376
 GameObject:
@@ -23377,7 +23377,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &8618295999103666252
 GameObject:
@@ -25817,7 +25817,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &9138953784317588658
 GameObject:
@@ -25938,7 +25938,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &9147008144715443813
 GameObject:
@@ -26059,7 +26059,7 @@ MonoBehaviour:
   _originalScale: {x: 0, y: 0, z: 0}
   _scaleTo: {x: 0, y: 0, z: 0}
   health: 0
-  maxHealth: 3
+  maxHealth: 12
   coinAmount: 10
 --- !u!1 &9168739472389214931
 GameObject:
