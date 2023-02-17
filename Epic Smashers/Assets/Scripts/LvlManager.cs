@@ -21,7 +21,6 @@ public class LvlManager : MonoBehaviour
     private void Start()
     {
         currLvlIndex = PlayerPrefs.GetInt("Level");
-        levels[currLvlIndex].SetActive(true);
         gradients[currLvlIndex].SetActive(true);
         currentLevel = Instantiate(levels[currLvlIndex]);
     }
